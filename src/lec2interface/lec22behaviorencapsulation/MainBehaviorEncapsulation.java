@@ -1,6 +1,6 @@
-package lec2interface.lec22methodencapsulation;
+package lec2interface.lec22behaviorencapsulation;
 
-public class MainMethodEncapsulation {
+public class MainBehaviorEncapsulation {
 
     public static void main(String[] args) {
         Student[] students = {new Student("A"), new Student("B"),

@@ -1,12 +1,12 @@
-package lec2interface.lec22methodencapsulation;
+package lec2interface.lec22behaviorencapsulation;
 
-public class CountryAreaMeasurer implements Measurer {
+public class CountryPopulationMeasurer implements Measurer {
 
     @Override
     public double measure(Object obj) {
 
         // not safe, since object may not be Country
         Country country = (Country) obj;
-        return country.getArea();
+        return country.getPopulation();
     }
 }

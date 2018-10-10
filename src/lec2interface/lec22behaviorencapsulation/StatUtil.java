@@ -1,4 +1,4 @@
-package lec2interface.lec22methodencapsulation;
+package lec2interface.lec22behaviorencapsulation;
 
 public class StatUtil {
 
