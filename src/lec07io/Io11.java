@@ -20,7 +20,7 @@ public class Io11 {
 			BufferedReader buffer = new BufferedReader(inReader);
 
 			// write to file (write over old file)
-			fileWriter = new FileWriter("from-user.txt");
+			fileWriter = new FileWriter("data/from-user.txt");
 			PrintWriter out = new PrintWriter(new BufferedWriter(fileWriter));
 
 			System.out.println("Input text to file:");

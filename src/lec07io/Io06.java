@@ -10,7 +10,7 @@ public class Io06 {
 	// read numbers from file
 	public static void main(String[] args) {
 
-		String filename = "number.txt";
+		String filename = "data/number.txt";
 		try {
 			FileReader fileReader = new FileReader(filename);
 			BufferedReader buffer = new BufferedReader(fileReader);

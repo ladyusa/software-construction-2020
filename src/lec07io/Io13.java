@@ -12,7 +12,7 @@ public class Io13 {
 
 		try {
 			// write to file
-			FileWriter fileWriter = new FileWriter("any-type.txt");
+			FileWriter fileWriter = new FileWriter("data/any-type.txt");
 			PrintWriter out = new PrintWriter(new BufferedWriter(fileWriter));
 
 			out.println("hello");

@@ -12,7 +12,7 @@ public class Io05 {
 	// InputStreamReader
 	public static void main(String[] args) {
 
-		String filename = "hello.txt";
+		String filename = "data/hello.txt";
 		try {
 			FileReader fileReader = new FileReader(filename);
 			BufferedReader buffer = new BufferedReader(fileReader);

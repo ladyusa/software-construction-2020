@@ -10,7 +10,7 @@ public class Io08 {
 	// closing file
 	public static void main(String[] args) {
 
-		String filename = "hello.txt";
+		String filename = "data/hello.txt";
 		FileReader fileReader = null;
 		try {
 			fileReader = new FileReader(filename);

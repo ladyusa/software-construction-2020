@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox prefHeight="574.0" prefWidth="632.0" spacing="10.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="th.ac.ku.sci.todolistapp.MainPage">
+   <children>
+      <TableView fx:id="tableView" editable="true" maxHeight="1.7976931348623157E308">
+        <columns>
+          <TableColumn fx:id="isDoneColumn" minWidth="-Infinity" prefWidth="83.0" text="Completed" />
+          <TableColumn fx:id="titleColumn" minWidth="42.0" prefWidth="87.0" text="Task" />
+            <TableColumn fx:id="createdColumn" minWidth="150.0" prefWidth="150.0" text="Created" />
+            <TableColumn fx:id="startColumn" minWidth="150.0" prefWidth="150.0" text="Start" />
+            <TableColumn fx:id="endColumn" minWidth="150.0" prefWidth="150.0" text="End" />
+        </columns>
+      </TableView>
+      <Button mnemonicParsing="false" onAction="#clearDoneButtonActionHandler" text="Clear Done" />
+      <Separator prefWidth="200.0" />
+      <Accordion>
+        <panes>
+          <TitledPane animated="false" text="Detail">
+            <content>
+              <AnchorPane>
+                     <children>
+                        <VBox spacing="5.0">
+                           <children>
+                              <FlowPane hgap="10.0">
+                                 <children>
+                                    <Label text="Title" />
+                                    <TextField fx:id="titleUpdateTextField" prefWidth="400.0" />
+                                 </children>
+                              </FlowPane>
+                              <Label text="Detail" />
+                              <TextArea fx:id="detailUpdateTextArea" minHeight="150.0" prefHeight="150.0" />
+                              <FlowPane hgap="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                       <children>
+                                          <CheckBox fx:id="startUpdateCheckBox" mnemonicParsing="false" text="Start" />
+                                          <DatePicker fx:id="startUpdateDatePicker" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                       <children>
+                                          <CheckBox fx:id="endUpdateCheckBox" mnemonicParsing="false" text="End" />
+                                          <DatePicker fx:id="endUpdateDatePicker" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </FlowPane>
+                              <Button mnemonicParsing="false" onAction="#updateButtonActionHandler" text="Update" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Add">
+            <content>
+              <AnchorPane>
+                     <children>
+                        <VBox spacing="5.0">
+                           <children>
+                              <FlowPane hgap="10.0">
+                                 <children>
+                                    <Label text="Title" />
+                                    <TextField fx:id="titleAddTextField" prefWidth="400.0" />
+                                 </children>
+                              </FlowPane>
+                              <Label text="Detail" />
+                              <TextArea fx:id="detailAddTextArea" minHeight="150.0" prefHeight="150.0" />
+                              <FlowPane hgap="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                       <children>
+                                          <CheckBox fx:id="startAddCheckBox" mnemonicParsing="false" text="Start" />
+                                          <DatePicker fx:id="startAddDatePicker" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                       <children>
+                                          <CheckBox fx:id="endAddCheckBox" mnemonicParsing="false" text="End" />
+                                          <DatePicker fx:id="endAddDatePicker" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </FlowPane>
+                              <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonActionHandler" text="Add" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <Separator prefWidth="200.0" />
+      <ButtonBar>
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#loadButtonActionHandler" text="Load" />
+            <Button mnemonicParsing="false" onAction="#saveButtonActionHandler" text="Save" />
+        </buttons>
+      </ButtonBar>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

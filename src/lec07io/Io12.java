@@ -24,7 +24,7 @@ public class Io12 {
 			BufferedReader buffer = new BufferedReader(inReader);
 
 			// write to file (append at the end of file)
-			fileWriter = new FileWriter("from-user.txt", true);
+			fileWriter = new FileWriter("data/from-user.txt", true);
 			PrintWriter out = new PrintWriter(new BufferedWriter(fileWriter));
 
 			System.out.println("Input text to file:");

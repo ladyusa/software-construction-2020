@@ -12,7 +12,7 @@ public class Io07 {
 	// read multiple data from file and create an object
 	public static void main(String[] args) {
 
-		String filename = "restaurant.txt";
+		String filename = "data/restaurant.txt";
 		List<Restaurant> restaurants = new ArrayList<>();
 		try {
 			FileReader fileReader = new FileReader(filename);

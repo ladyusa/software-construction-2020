@@ -9,14 +9,14 @@ public class Io16 {
 
         Restaurant r = new Restaurant("After Me", "Dessert", "Phahonyothin");
 
-        FileOutputStream fileOs = new FileOutputStream("res-object");
+        FileOutputStream fileOs = new FileOutputStream("data/res-object");
         ObjectOutputStream out = new ObjectOutputStream(fileOs);
 
         out.writeObject(r);
         out.close();
 
 
-        FileInputStream fileIs = new FileInputStream("res-object");
+        FileInputStream fileIs = new FileInputStream("data/res-object");
         ObjectInputStream in = new ObjectInputStream(fileIs);
 
         Restaurant readRes = (Restaurant) in.readObject();
