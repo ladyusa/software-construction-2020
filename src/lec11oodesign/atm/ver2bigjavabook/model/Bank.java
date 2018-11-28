@@ -1,9 +1,7 @@
 package lec11oodesign.atm.ver2bigjavabook.model;
 
-import lec11oodesign.atm.ver2bigjavabook.data.DataSource;
-
-import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -11,20 +9,23 @@ import java.util.Map;
  */
 public class Bank {
 
+   private String name;
    private Map<Integer,Customer> customers;
-   private DataSource dataSource;
 
    /**
     * Constructs a bank with no customers.
     */
-   public Bank() {
-      dataSource = new DataSource();
-      customers = new HashMap<Integer,Customer>();
+   public Bank(String name) {
+      this.name = name;
+      this.customers = new HashMap<Integer,Customer>();
    }
 
-   public void initializeCustomers() throws IOException {
-      customers = dataSource.readCustomers();
+   public void addCustomers(List<Customer> customerList) {
+      for (Customer c : customerList) {
+         addCustomer(c);
+      }
    }
+
    /**
     * Adds a customer to the bank.
     * @param c the customer to add

@@ -1,7 +1,5 @@
 package lec11oodesign.atm.ver2bigjavabook.model;
 
-import java.io.IOException;
-
 /**
  * An ATM that accesses a bank.
  */
@@ -18,15 +16,11 @@ public class ATM {
 	/**
      * Constructs an ATM for a bank.
 	 */
-	public ATM() {
-		this.bank = new Bank();
+	public ATM(Bank bank) {
+		this.bank = bank;
 		this.customerNumber = -1;
 		this.currentAccount = null;
 		this.state = START;
-	}
-
-	public void init() throws IOException {
-		bank.initializeCustomers();
 	}
 
 	/**

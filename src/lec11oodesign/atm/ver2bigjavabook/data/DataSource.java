@@ -4,8 +4,8 @@ import lec11oodesign.atm.ver2bigjavabook.model.Customer;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class DataSource {
@@ -27,8 +27,8 @@ public class DataSource {
      * Reads the customer numbers and pins
      * and initializes the bank accounts.
      */
-    public Map<Integer, Customer> readCustomers() throws IOException {
-        Map<Integer,Customer> customers = new HashMap<Integer,Customer>();
+    public List<Customer> readCustomers() throws IOException {
+        List<Customer> customers = new ArrayList<>();
 
         Scanner in = new Scanner(new FileReader(filename));
         while (in.hasNext()) {
@@ -36,7 +36,7 @@ public class DataSource {
             int pin = in.nextInt();
             double currentBalance = in.nextDouble();
             Customer c = new Customer(number, pin, currentBalance);
-            customers.put(c.getCustomerNumber(), c);
+            customers.add(c);
         }
         in.close();
         return customers;

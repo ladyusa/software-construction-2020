@@ -1,6 +1,8 @@
 package lec11oodesign.atm.ver2bigjavabook.ui;
 
+import lec11oodesign.atm.ver2bigjavabook.data.DataSource;
 import lec11oodesign.atm.ver2bigjavabook.model.ATM;
+import lec11oodesign.atm.ver2bigjavabook.model.Bank;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -11,19 +13,24 @@ import java.util.Scanner;
 public class AtmUI {
 
 	private ATM atm;
+	private Bank bank;
 
 	public AtmUI() {
-		atm = new ATM();
+		bank = new Bank("SW Con Bank");
+		atm = new ATM(bank);
+		initCustomers();
 	}
 
-	public void run() {
+	private void initCustomers() {
+		DataSource dataSource = new DataSource();
 		try {
-			atm.init();
-		}
-		catch(IOException e) {
+			bank.addCustomers(dataSource.readCustomers());
+		} catch (IOException e) {
 			System.out.println("Error reading account data.");
 			return;
 		}
+	}
+	public void run() {
 
 		Scanner in = new Scanner(System.in);
 
