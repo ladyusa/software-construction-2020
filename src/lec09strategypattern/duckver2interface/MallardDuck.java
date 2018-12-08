@@ -1,4 +1,4 @@
-package lec09strategypattern.ver2interface;
+package lec09strategypattern.duckver2interface;
 
 public class MallardDuck extends Duck implements Flyable, Quackable {
     @Override

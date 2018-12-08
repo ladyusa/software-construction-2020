@@ -1,4 +1,4 @@
-package lec09strategypattern.ver3strategypattern;
+package lec09strategypattern.duckver3strategypattern;
 
 public abstract class Duck {
     private FlyBehavior flyBehavior;
