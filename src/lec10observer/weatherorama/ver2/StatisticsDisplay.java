@@ -1,4 +1,4 @@
-package lec10observer.weatherorama;
+package lec10observer.weatherorama.ver2;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +18,7 @@ public class StatisticsDisplay implements Observer {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
-        area = new JTextArea(150, 150);
+        area = new JTextArea(200, 200);
         frame.add(area);
         area.setBackground(Color.ORANGE);
         area.setText("Average Condition:\n");
@@ -26,15 +26,18 @@ public class StatisticsDisplay implements Observer {
     }
 
     @Override
-    public void update(double temp, double humid, double pressure) {
-        if (prevTemp == 0)
-            prevTemp = temp;
-        double avg = (prevTemp + temp)/2;
-        prevTemp = avg;
+    public void update(Subject data) {
+        if (data instanceof WeatherData) {
+            WeatherData weatherData = (WeatherData) data;
 
-        area.setBackground(Color.ORANGE);
-        area.setText("Average Condition:\n");
-        area.append("Temperature = "+avg);
+            if (prevTemp == 0)
+                prevTemp = weatherData.getTemperature();
+            double avg = (prevTemp + weatherData.getTemperature()) / 2;
+            prevTemp = avg;
 
+            area.setBackground(Color.ORANGE);
+            area.setText("Average Condition:\n");
+            area.append("Temperature = " + avg);
+        }
     }
 }

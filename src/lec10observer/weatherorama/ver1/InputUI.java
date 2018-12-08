@@ -1,10 +1,10 @@
-package lec10observer.weatherorama.ver2;
+package lec10observer.weatherorama.ver1;
 
 import java.util.Scanner;
 
 public class InputUI {
 
-    public void receive(WeatherData weatherData, OceanData oceanData) {
+    public void receive(WeatherData weatherData) {
 
         Scanner in = new Scanner(System.in);
 
@@ -23,14 +23,6 @@ public class InputUI {
             // set new data, causing weatherData subject
             // to "notify" all observers (via calling an update() method)
             weatherData.setMeasurement(temp, humid, pressure);
-
-            System.out.print("Wave Height: ");
-            double height = Double.parseDouble(in.nextLine());
-            oceanData.setWaveHeight(height);
-
-            System.out.print("Wind: ");
-            double wind = Double.parseDouble(in.nextLine());
-            oceanData.setWindGust(wind);
         }
     }
 }
