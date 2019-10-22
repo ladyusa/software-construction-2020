@@ -28,6 +28,8 @@ public class FinanceManager {
         // such as symptom and diagnosis, which is
         //    GOOD DESIGN
 
+        treatment.getMedicineOrders();
+
     }
 
 }

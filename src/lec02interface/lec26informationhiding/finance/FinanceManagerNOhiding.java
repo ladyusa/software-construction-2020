@@ -17,6 +17,8 @@ public class FinanceManagerNOhiding {
         // such as symptom and diagnosis, which is
         //    BAD DESIGN
 
+        treatment.setDiagnosis("ANYTHING"); // BAD DESIGN HERE
+        treatment.getMedicineOrders();
 
     }
 

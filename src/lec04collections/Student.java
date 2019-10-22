@@ -1,5 +1,7 @@
 package lec04collections;
 
+import java.util.Objects;
+
 public class Student {
     private String name;
     private double score;
@@ -27,4 +29,11 @@ public class Student {
         this.score = score;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", score=" + score +
+                '}';
+    }
 }
