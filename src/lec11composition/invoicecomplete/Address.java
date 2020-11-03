@@ -1,4 +1,4 @@
-package lec11composition.invoice;
+package lec11composition.invoicecomplete;
 
 /**
    Describes a mailing address.

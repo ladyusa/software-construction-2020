@@ -1,4 +1,4 @@
-package lec11composition.invoice;
+package lec11composition.invoicecomplete;
 
 public class CashRegister {
 

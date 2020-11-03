@@ -1,4 +1,4 @@
-package lec11composition.invoice;
+package lec11composition.invoicecomplete;
 
 /**
    This program demonstrates the invoice classes by printing
