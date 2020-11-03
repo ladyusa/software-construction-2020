@@ -1,6 +1,6 @@
 package lec10observer.version4manytomany.post;
 
-import version4manytomany.util.Subject;
+import lec10observer.version4manytomany.util.Subject;
 
 import java.util.ArrayList;
 import java.util.List;

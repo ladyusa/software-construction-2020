@@ -1,6 +1,6 @@
 package lec10observer.version2subjectabstractclass.data;
 
-import version2subjectabstractclass.util.Subject;
+import lec10observer.version2subjectabstractclass.util.Subject;
 
 public class Rice extends Subject {
     private double price;

@@ -1,7 +1,7 @@
 package lec10observer.version4manytomany.post;
 
-import version4manytomany.util.Observer;
-import version4manytomany.util.Subject;
+import lec10observer.version4manytomany.util.Observer;
+import lec10observer.version4manytomany.util.Subject;
 
 import java.io.FileWriter;
 import java.io.IOException;

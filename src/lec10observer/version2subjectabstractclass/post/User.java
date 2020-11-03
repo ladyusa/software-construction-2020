@@ -1,7 +1,7 @@
 package lec10observer.version2subjectabstractclass.post;
 
-import version2subjectabstractclass.util.Observer;
-import version2subjectabstractclass.util.Subject;
+import lec10observer.version2subjectabstractclass.util.Observer;
+import lec10observer.version2subjectabstractclass.util.Subject;
 
 import java.time.LocalDateTime;
 
